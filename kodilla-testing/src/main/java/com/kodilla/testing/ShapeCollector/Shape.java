@@ -2,11 +2,11 @@ package com.kodilla.testing.ShapeCollector;
 
 public interface Shape {
 
-    private String getShapeName() {
+    public default String getShapeName() {
         return null;
     }
 
-    private double getField() {
+    public default double getField() {
         return 0.0;
     }
 

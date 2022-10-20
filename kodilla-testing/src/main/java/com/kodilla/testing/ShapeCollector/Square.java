@@ -32,4 +32,14 @@ public class Square implements Shape {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
+
+    @Override
+    public String getShapeName() {
+        return null;
+    }
+
+    @Override
+    public double getField() {
+        return Shape.super.getField();
+    }
 }

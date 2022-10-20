@@ -24,10 +24,11 @@ public class ForumTestSuite {
         System.out.println("Preparing to execute test#:" + testCounter);
     }
 
-    @Nested
-    @DisplayName("Tests for posts")
 
     @Test //1
+
+    @DisplayName("Tests for posts")
+
     void testAddPost() {
         //given
         ForumUser forumUser = new ForumUser("mrssmith", "John Smith");
