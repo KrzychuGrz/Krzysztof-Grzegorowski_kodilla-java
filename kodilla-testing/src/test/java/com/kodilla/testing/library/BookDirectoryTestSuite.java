@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 public class BookDirectoryTestSuite {
@@ -80,7 +80,17 @@ public class BookDirectoryTestSuite {
 
     @Test
     void testListBooksWithConditionFragmentShorterThan3() {
-        assertTrue(false);
+        //given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+
+        //when
+        List<Book> theListOfBooks10 = bookLibrary.listBooksWithCondition("An");
+
+        //then
+        assertEquals(0, theListOfBooks10.size());
+        verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
     }
+
 
 }

@@ -40,10 +40,10 @@
 //        Circle circle = new Circle("Circle", 30.5);
 //
 //        //when
-//        List<String> shapeCollector = new ArrayList<>();
-//        ShapeCollector.addFigure(triangle);
-//        ShapeCollector.addFigure(square);
-//        ShapeCollector.addFigure(circle);
+//        ShapeCollector shapeCollector = new ShapeCollector();
+//        shapeCollector.addFigure(triangle);
+//        shapeCollector.addFigure(square);
+//        shapeCollector.addFigure(circle);
 //
 //        //then
 //        Assertions.assertEquals(shapeCollector.size() == 3, shapeCollector.size());
@@ -59,10 +59,10 @@
 //        Circle circle = new Circle("Circle", 30.5);
 //
 //        //when
-//        List<String> shapeCollector = new ArrayList<>();
-//        ShapeCollector.removeFigure(triangle);
-//        ShapeCollector.removeFigure(square);
-//        ShapeCollector.removeFigure(circle);
+//        ShapeCollector shapeCollector = new ShapeCollector();
+//        shapeCollector.removeFigure(triangle);
+//        shapeCollector.removeFigure(square);
+//        shapeCollector.removeFigure(circle);
 //
 //        //then
 //        Assertions.assertEquals(shapeCollector.size() == 3, shapeCollector.isEmpty());

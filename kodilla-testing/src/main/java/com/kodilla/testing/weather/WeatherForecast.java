@@ -31,20 +31,21 @@ public class WeatherForecast {
 
     }
 
-//    public List<Double> calculateTempAvg() {                                           //dodana metoda; wyciągnięcie valuese z HashMapy do ArrayListy
-//        List<Double> AvgResultMap = new ArrayList<Double>();
-//
-//        for (Map.Entry<String, Double> temperature :
-//                temperatures.getTemperatures().entrySet()) {
-//            AvgResultMap.add(temperature.getValue());
-//        }
-//        return AvgResultMap;
-//for (int n = 0; n < AvgResultMap.size(); n++) {
-//    sum += AvgResultMap.get(n);
-//}
-//
-//        tempAvg = sum / AvgResultMap.size();
+    public Double calculateTempAvg() {                                           //dodana metoda; wyciągnięcie valuese z HashMapy do ArrayListy
+        List<Double> AvgResultMap = new ArrayList<Double>();
+
+        for (Map.Entry<String, Double> temperature :
+                temperatures.getTemperatures().entrySet()) {
+            AvgResultMap.add(temperature.getValue());
+        }
+
+        for (int n = 0; n < AvgResultMap.size(); n++) {
+            sum += AvgResultMap.get(n);
+        }
+
+        return sum / AvgResultMap.size();
     }
+}
 
 
 

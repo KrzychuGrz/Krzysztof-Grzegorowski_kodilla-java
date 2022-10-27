@@ -5,14 +5,14 @@
 //
 // class ShapeCollector {
 //
-//List<String> shapeCollector = new ArrayList<>();
+//List<Shape> shapeCollector = new ArrayList<Shape>();
 //
-//    public static String addFigure(Shape triangle) {
-//        return shapeCollector.add(triangle);
+//    public  void addFigure(Shape triangle) {
+//        shapeCollector.add(triangle);
 //    }
 //
 //
-//    public static boolean removeFigure(Shape triangle) {
+//    public  boolean removeFigure(Shape triangle) {
 //        return shapeCollector.remove(triangle);
 //    }
 //
@@ -20,11 +20,11 @@
 //        if (shapeCollector.isEmpty())
 //            System.out.println("Collection is empty!");
 //        else {
-//            return shapeCollector.get(2);
+//            return shapeCollector.get(n);
 //        }
 //
-//        public String showFigures() {
-//            for (String figure : shapeCollector) {
+//        public Shape showFigures() {
+//            for (Shape figure : shapeCollector) {
 //                System.out.println("List of figures:" + figure);
 //            }
 //
