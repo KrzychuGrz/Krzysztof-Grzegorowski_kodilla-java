@@ -1,21 +1,35 @@
 package com.kodilla.stream;
 
 
-import com.kodilla.stream.beautifier.PoemBeautifier;
-import com.kodilla.stream.beautifier.PoemDecorator;
-import com.kodilla.stream.iterate.NumbersGenerator;
+import com.kodilla.stream.book.Book;
+import com.kodilla.stream.book.BookDirectory;
+import com.kodilla.stream.forumuser.Forum;
+import com.kodilla.stream.forumuser.ForumUser;
+import com.kodilla.stream.person.People;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.Map;
 
 public class StreamMain {
     public static void main (String [] args) {
-        PoemBeautifier poemBeautifier = new PoemBeautifier();
-        String poem = "Za stodołą, gdzieś na płocie kogut gromko pieje, zaraz przyjdę miła do cię, tylko się odleję";
-        poemBeautifier.beautify(() -> System.out.println(poem));
-        poemBeautifier.beautify(() -> System.out.println(poem.toUpperCase()));
-        poemBeautifier.beautify(() -> System.out.println(poem.toLowerCase()));
-        poemBeautifier.beautify(() -> System.out.println("*** " + poem + " ***"));
-        poemBeautifier.beautify(() -> System.out.println("A teraz przed państwem próbka poezji krasnoludzkiej: " + poem));
+        Forum forum = new Forum();
+        String StringOfForumUsers = forum.getList().stream()
+                .filter(forumUser -> forumUser.getSex() == 'm')
+                .filter(forumUser -> forumUser.getBirthDate() >= LocalDate.of(2002,1,1))
+                .filter(forumUser -> forumUser.getPosts() > 0)
+                .collect(Collectors.toMap(ForumUser::getUserID, forumUser -> forumUser));
 
-        System.out.println("Using stream to generate even numbers form 1 to 20");
-        NumbersGenerator.generateEven(20);
+                 System.out.println(StringOfForumUsers);
+
+//        BookDirectory theBookDirectory = new BookDirectory();
+//        String theResultStringOfBooks = theBookDirectory.getList().stream()
+//                .filter(book -> book.getYearOfPublication() > 2005)
+//                .map(Book::toString)
+//                .collect(Collectors.joining(", \n"," <<",">>"));
+//
+//                System.out.println(theResultStringOfBooks);
+
     }
 }
