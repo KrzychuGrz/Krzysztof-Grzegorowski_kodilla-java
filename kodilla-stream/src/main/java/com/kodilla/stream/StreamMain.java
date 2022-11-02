@@ -15,9 +15,9 @@ import java.util.Map;
 public class StreamMain {
     public static void main (String [] args) {
         Forum forum = new Forum();
-        String StringOfForumUsers = forum.getList().stream()
+        Map StringOfForumUsers = forum.getList().stream()
                 .filter(forumUser -> forumUser.getSex() == 'm')
-                .filter(forumUser -> forumUser.getBirthDate() >= LocalDate.of(2002,1,1))
+                .filter(forumUser -> forumUser.getBirthDate().isBefore(LocalDate.of(2002,01,01)))
                 .filter(forumUser -> forumUser.getPosts() > 0)
                 .collect(Collectors.toMap(ForumUser::getUserID, forumUser -> forumUser));
 

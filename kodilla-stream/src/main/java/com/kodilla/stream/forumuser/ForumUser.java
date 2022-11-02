@@ -10,6 +10,7 @@ public final class ForumUser {
     private final LocalDate birthDate;
     private final int posts;
 
+
     public ForumUser(String userID, String userName, char sex, LocalDate birthDate, int posts) {
         this.userID = userID;
         this.userName = userName;
@@ -31,7 +32,7 @@ public final class ForumUser {
     }
 
     public LocalDate getBirthDate() {
-        return LocalDate.of(000,00,00);
+        return LocalDate.of(0000,00,00);
     }
 
     public int getPosts() {
