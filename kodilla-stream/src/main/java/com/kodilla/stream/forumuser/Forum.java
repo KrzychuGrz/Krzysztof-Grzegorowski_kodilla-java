@@ -8,7 +8,7 @@ public final class Forum {
 
     private final List<ForumUser> forumUserList = new ArrayList<>();
             public Forum() {
-        forumUserList.add(new ForumUser("0001", "Marik1234", 'm', LocalDate.of(1990,02,12) , 2137));
+        forumUserList.add(new ForumUser("0001", "Marik1234", 'm', LocalDate.of(2005,02,12) , 2137));
         forumUserList.add(new ForumUser("0221", "Princess Kitana", 'f', LocalDate.of(1989,9,9), 0));
         forumUserList.add(new ForumUser("9999", "Johnny Silverhand", 'm', LocalDate.of(1990, 06, 28), 12));
         forumUserList.add(new ForumUser("0002", "Delicja Szampańska", 'f', LocalDate.of(1995,06,20), 25));
