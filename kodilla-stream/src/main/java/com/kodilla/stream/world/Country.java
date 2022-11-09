@@ -2,6 +2,7 @@ package com.kodilla.stream.world;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import java.util.Set;
 
 public final class Country {
 
@@ -21,11 +22,18 @@ public final class Country {
         return peopleQuantity;
     }
 
-    static Country poland = new Country("Poland", new BigDecimal("40000000"));
-    static Country china = new Country("China", new BigDecimal("1400000000"));
-    static Country canada = new Country("Canada", new BigDecimal("38000000"));
-    static Country australia = new Country("Australia", new BigDecimal("21000000"));
-    static Country argentina = new Country("Argentina", new BigDecimal("46000000"));
-    static Country rsa = new Country("Republic of South Africa", new BigDecimal("60000000"));
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        Country country = (Country) o;
+
+        return Objects.equals(countryName, country.countryName);
+    }
+
+    @Override
+    public int hashCode() {
+        return countryName != null ? countryName.hashCode() : 0;
+    }
 }

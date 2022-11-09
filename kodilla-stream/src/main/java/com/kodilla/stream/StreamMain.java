@@ -1,4 +1,4 @@
-package com.kodilla.stream.forumuser;
+package com.kodilla.stream;
 
 
 import com.kodilla.stream.forumuser.Forum;

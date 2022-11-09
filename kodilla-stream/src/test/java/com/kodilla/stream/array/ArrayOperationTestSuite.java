@@ -24,6 +24,6 @@ public class ArrayOperationTestSuite {
         //then
         OptionalDouble avg = IntStream.range(0, numbers.length)
                                 .average();
-        assertEquals(9.5, avg);
+        assertEquals(9.5, avg.getAsDouble());
     }
 }

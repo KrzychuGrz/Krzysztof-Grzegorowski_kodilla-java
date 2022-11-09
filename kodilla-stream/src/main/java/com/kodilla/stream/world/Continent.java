@@ -1,26 +1,14 @@
 package com.kodilla.stream.world;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public final class Continent {
 
-    public static final List<Country> europe = new ArrayList<>();
-    public static final List<Country> asia = new ArrayList<>();
-    public static final List<Country> nAmerica = new ArrayList<>();
-    public static final List<Country> australia = new ArrayList<>();
-    public static final List<Country> sAmerica = new ArrayList<>();
-    public static final List<Country> africa = new ArrayList<>();
 
-    public Continent() {
-        europe.add(Country.poland);
-        asia.add(Country.china);
-        nAmerica.add(Country.canada);
-        australia.add(Country.australia);
-        sAmerica.add(Country.argentina);
-        africa.add(Country.rsa);
-
+    public void addCountry(Country country) {
     }
 
 }
