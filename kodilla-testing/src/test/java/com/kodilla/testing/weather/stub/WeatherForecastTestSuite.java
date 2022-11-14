@@ -6,7 +6,7 @@ import com.kodilla.testing.weather.WeatherForecast;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class WeatherForecastTestSuite {
+public class ioeWeatherForecastTestSuite {
 
     @Test
     void testCalculateForecastWithStub() {

@@ -52,14 +52,14 @@
 //        temperaturesList.add(24.8);
 //        temperaturesList.add(25.2);
 //        temperaturesList.add(26.1);
-////        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesList);           //dlaczego tu jest babol?
-//        WeatherForecast Average = new WeatherForecast(temperaturesMock);
+//        when(temperaturesMock.getTemperatures()).thenReturn(temperaturesMap);
+//        WeatherForecast average = new WeatherForecast(temperaturesMock);
 //
 //        //when
-////         double ;                                                                     // tutaj jako rezultat powinna się znaleźc średnia
+//       double quantityOfSensors = average.calculateTempAvg();                                                                // tutaj jako rezultat powinna się znaleźc średnia
 //
 //    //then
-//        Assertions.assertEquals(5, Average);
+//        Assertions.assertEquals(5, quantityOfSensors);
 //
 //    }
 //}

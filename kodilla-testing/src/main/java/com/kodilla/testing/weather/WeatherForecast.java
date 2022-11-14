@@ -4,15 +4,10 @@ import java.util.*;
 
 public class WeatherForecast {
     private Temperatures temperatures;
-    private double tempAvg;
     private double sum;
 
     public WeatherForecast(Temperatures temperatures) {
         this.temperatures = temperatures;
-    }
-
-    public double getTempAvg() {
-        return tempAvg;
     }
 
     public double getSum() {
@@ -31,8 +26,8 @@ public class WeatherForecast {
 
     }
 
-    public Double calculateTempAvg() {                                           //dodana metoda; wyciągnięcie valuese z HashMapy do ArrayListy
-        List<Double> AvgResultMap = new ArrayList<Double>();
+    public Double calculateTempAvg() {
+        List<Double> AvgResultMap = new ArrayList<>();
 
         for (Map.Entry<String, Double> temperature :
                 temperatures.getTemperatures().entrySet()) {
@@ -43,9 +38,12 @@ public class WeatherForecast {
             sum += AvgResultMap.get(n);
         }
 
+
         return sum / AvgResultMap.size();
     }
 }
+
+
 
 
 

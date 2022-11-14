@@ -1,13 +1,26 @@
 package com.kodilla.exception.io;
 
+import javax.imageio.IIOException;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class FileReader {
 
     public void readFile() {
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("name.txt").getFile());
+        File file = new File(classLoader.getResource("names.txt").getFile());
+        Path path = Paths.get(file.getPath());
 
-        System.out.println(file.getPath());
+        try (Stream<String> fileLines = Files.lines(Paths.get(file.getPath()))) {
+            fileLines.forEach(System.out::println);
+        } catch (IOException e) {
+            System.out.println("Something went wrong" + " " + e);
+        } finally {
+            System.out.println("i am gonna be here always!");
+        }
     }
 }
