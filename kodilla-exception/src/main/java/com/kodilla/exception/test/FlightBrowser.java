@@ -9,7 +9,7 @@ public class FlightBrowser {
         Map<String, Boolean> canIflightThere = new HashMap<>();
         canIflightThere.put("Warszawa Modlin", true);
         canIflightThere.put("Kraków Balice", true);
-        canIflightThere.put("Poznań Ławica", false);
+        canIflightThere.put("Poznan Lawica", false);
         return canIflightThere.toString();
     }
 }
