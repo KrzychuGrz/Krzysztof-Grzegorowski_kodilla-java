@@ -9,7 +9,7 @@ public final class Calculator {
     double a = 2;
     double b = 2;
 
-    private Display display = new Display();
+    private Display display;
 
     private Calculator(final Display display) {
         this.display = display;
