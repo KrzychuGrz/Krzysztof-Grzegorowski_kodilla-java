@@ -5,9 +5,13 @@ import java.util.List;
 
 public class TaskList {
 
-    List<String> tasks;
+   public final List<String> tasks;
 
-    public TaskList(final Board tasks) {
+    public TaskList() {
         this.tasks = new ArrayList<>();
+    }
+
+    public List<String>getTasks() {
+        return tasks;
     }
 }

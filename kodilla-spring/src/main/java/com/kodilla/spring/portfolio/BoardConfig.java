@@ -5,25 +5,33 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-
-import java.util.ArrayList;
+import org.springframework.scheduling.config.Task;
 
 @Configuration
 public class BoardConfig {
 
-     @Autowired
-             @Qualifier("board1")
-    Board board;
-
-     @Bean
-   public TaskList taskList() {
-         return new TaskList(board);
-     }
+    @Bean
+    @Scope("prototype")
+    public Board board() {
+        return new Board(getListOne(), getListTwo(), getListThree());
+    }
 
      @Bean(name = "list1")
      @Scope("prototype")
-     public Board getListOne () {
-         return new Board()
+     public TaskList getListOne() {
+         return new TaskList();
+     }
+
+     @Bean(name = "list2")
+    @Scope("prototype")
+    public TaskList getListTwo() {
+         return new TaskList();
+     }
+
+     @Bean(name = "list3")
+    @Scope("prototype")
+    public TaskList getListThree() {
+         return new TaskList();
      }
 
 
