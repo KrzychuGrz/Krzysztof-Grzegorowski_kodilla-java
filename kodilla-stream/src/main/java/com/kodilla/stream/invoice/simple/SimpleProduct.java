@@ -8,7 +8,7 @@ public final class SimpleProduct {
     private final double productPrice;
 
     public SimpleProduct(String productName, double productPrice) {
-        ProductName = productName;
+        this.ProductName = productName;
         this.productPrice = productPrice;
     }
 
