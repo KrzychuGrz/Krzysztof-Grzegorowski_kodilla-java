@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.persistence.Id;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,19 +21,18 @@ public class TaskListDaoTestSuite {
     @Test
     void testFindByName() {
         //given
-        TaskList taskList = new TaskList(1, "ToDoList", "List with job to do");
+        TaskList taskList = new TaskList("ToDoList", "List with job to do");
 
         //when
         taskListDao.save(taskList);
 
         //then
         String listName = taskList.getListName();
-        Optional<TaskList> readTaskList = taskListDao.findByListName(listName);
+        Optional<TaskList> readTaskList = taskListDao.findById(taskList.getId());
         assertTrue(readTaskList.isPresent());
 
         //cleanUp
-        taskListDao.deleteById(id);
-
+        taskListDao.deleteAll();
 
 
     }
