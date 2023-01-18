@@ -41,5 +41,8 @@ public class InvoiceDaoTestSuite {
                 Optional<Invoice> saveInvoice = invoiceDao.findById(id);
                 assertTrue(saveInvoice.isPresent());
 
+                //cleanUp
+                //invoiceDao.deleteAll;
+
         }
 }
