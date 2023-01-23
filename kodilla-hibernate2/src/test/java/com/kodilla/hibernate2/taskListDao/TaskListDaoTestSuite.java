@@ -13,8 +13,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 public class TaskListDaoTestSuite {
@@ -65,4 +64,6 @@ public class TaskListDaoTestSuite {
         taskListDao.deleteById(id);
 
     }
+
+
 }

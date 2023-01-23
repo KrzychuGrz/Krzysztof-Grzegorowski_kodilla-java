@@ -5,6 +5,12 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedQueries({
+        @NamedQuery(name = "Company.retrieveCompanyNameByThree",
+                query = "FROM Company WHERE name = LEFT(3)"
+
+        )
+})
 @Entity
 @Table(name = "COMPANIES")
 public class Company {

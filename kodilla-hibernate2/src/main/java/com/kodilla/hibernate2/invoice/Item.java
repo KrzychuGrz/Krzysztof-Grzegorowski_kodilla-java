@@ -15,6 +15,7 @@ public class Item {
     private BigDecimal value;
     private int quantity;
     private Product product;
+    private Invoice invoice;
 
     public Item() {
     }
@@ -73,5 +74,13 @@ public class Item {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    private void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
     }
 }
